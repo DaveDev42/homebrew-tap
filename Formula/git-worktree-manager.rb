@@ -24,6 +24,7 @@ class GitWorktreeManager < Formula
 
   def install
     bin.install "gw"
+    bin.install "cw"
   end
 
   test do
