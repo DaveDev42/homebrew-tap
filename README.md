@@ -6,9 +6,9 @@ Homebrew tap for DaveDev42 projects.
 
 ```bash
 brew tap DaveDev42/tap
-brew install claude-worktree
+brew install git-worktree-manager
 ```
 
 ## Available Formulas
 
-- **claude-worktree** — CLI tool integrating git worktree with AI coding assistants
+- **git-worktree-manager** — CLI tool integrating git worktree with AI coding assistants

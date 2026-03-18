@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "description": "CLI tool integrating git worktree with AI coding assistants",
+  "homepage": "https://github.com/DaveDev42/git-worktree-manager",
+  "license": "BSD-3-Clause",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/DaveDev42/git-worktree-manager/releases/download/v0.0.1/gw-x86_64-pc-windows-msvc.zip",
+      "bin": "gw.exe"
+    }
+  },
+  "checkver": {
+    "github": "https://github.com/DaveDev42/git-worktree-manager"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/DaveDev42/git-worktree-manager/releases/download/v$version/gw-x86_64-pc-windows-msvc.zip"
+      }
+    }
+  }
+}
