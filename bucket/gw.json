@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/DaveDev42/git-worktree-manager/releases/download/v0.0.1/gw-x86_64-pc-windows-msvc.zip",
-      "bin": "gw.exe"
+      "bin": ["gw.exe", ["gw.exe", "cw"]]
     }
   },
   "checkver": {
