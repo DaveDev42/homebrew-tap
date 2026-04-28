@@ -1,8 +1,8 @@
 class ClaudeCodeCompletions < Formula
   desc "Shell completions for the Claude Code CLI (zsh, bash, fish)"
   homepage "https://github.com/DaveDev42/claude-code-completions"
-  url "https://github.com/DaveDev42/claude-code-completions/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "32fabd03dffab1c96b04515750f3f6ba2caa9b318dc96697e24d9ae630f026f3"
+  url "https://github.com/DaveDev42/claude-code-completions/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "c2f44d0b045975a558c4d0090ef4af3d6f53d2017d8410420448bba329744aaf"
   license "MIT"
   head "https://github.com/DaveDev42/claude-code-completions.git", branch: "main"
 
@@ -25,6 +25,32 @@ class ClaudeCodeCompletions < Formula
     (pkgshare/"_claude.static").write (buildpath/"completions/_claude").read
     (pkgshare/"claude.bash.static").write (buildpath/"completions/claude.bash").read
     (pkgshare/"claude.fish.static").write (buildpath/"completions/claude.fish").read
+  end
+
+  def caveats
+    <<~EOS
+      Shell completions are installed under #{HOMEBREW_PREFIX}. For tab completion
+      to actually activate, your shell must see those directories on its
+      completion path.
+
+      zsh:
+        Ensure `eval "$(#{HOMEBREW_PREFIX}/bin/brew shellenv)"` runs in ~/.zshrc
+        BEFORE `compinit` (and BEFORE zinit / oh-my-zsh / prezto / antidote
+        init, since those call compinit themselves). After installing, run:
+          rm -f ~/.zcompdump* && exec zsh
+
+      bash:
+        Requires the `bash-completion` formula. Then ensure your ~/.bashrc
+        sources its init script (Homebrew prints instructions on
+        `brew install bash-completion`).
+
+      fish:
+        Works out of the box once `eval "$(#{HOMEBREW_PREFIX}/bin/brew shellenv)"`
+        is in ~/.config/fish/config.fish.
+
+      Verify everything is wired up:
+        claude-code-completions doctor
+    EOS
   end
 
   test do
