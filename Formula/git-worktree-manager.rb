@@ -1,26 +1,26 @@
 class GitWorktreeManager < Formula
   desc "CLI tool integrating git worktree with AI coding assistants"
   homepage "https://github.com/DaveDev42/git-worktree-manager"
-  version "0.0.40"
+  version "0.1.2"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/DaveDev42/git-worktree-manager/releases/download/v#{version}/gw-aarch64-apple-darwin.tar.gz"
-      sha256 "accebb3de44c71e7c0a37dede32c8b01df0ec364c157b8f71bc72cd7a7951499"
+      sha256 "8bcc6ce5bf7d1c4caec916d9585e1f288a94892ccdfe60e2ed970b039c630fca"
     else
       url "https://github.com/DaveDev42/git-worktree-manager/releases/download/v#{version}/gw-x86_64-apple-darwin.tar.gz"
-      sha256 "471197050dbead700d757deaf94edbe51d19f8838951fce87508ae535d72c11b"
+      sha256 "d4579344966942d88c3b2b08f7115795062f9121aa479dfa765dce1a1ac60871"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/DaveDev42/git-worktree-manager/releases/download/v#{version}/gw-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "596fae44228fe2da6ae860dcbd72929182c72ffaa0605a9ecc745cd1694c499c"
+      sha256 "f9f0e0e916506061cc4a5b65999d4bd3a6bcb2600413a33850cdee3eea9bbc2f"
     else
       url "https://github.com/DaveDev42/git-worktree-manager/releases/download/v#{version}/gw-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "01035bbf59757eff74d8b7bb19017bc19ba24bed7a198e947c6099fc7ce53e10"
+      sha256 "9d1647779d2a1da71a9ff94e7521128b950f8fe25cd8fdc60b4d39c5b50e5180"
     end
   end
 
