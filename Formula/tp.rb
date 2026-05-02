@@ -1,16 +1,16 @@
 class Tp < Formula
   desc "Remote Claude Code session controller"
   homepage "https://github.com/DaveDev42/teleprompter"
-  version "0.1.19"
+  version "0.1.20"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/DaveDev42/teleprompter/releases/download/v#{version}/tp-darwin_arm64"
-      sha256 "3a8d489d5b5ec39dcaa831ddacf5e55fae75f1ffedca089f27c69989f5deede3"
+      sha256 "41e9f8d523a2aea61cfc5daddda2118d76e828d5c545ded50b1317bde0ef5fc9"
     else
       url "https://github.com/DaveDev42/teleprompter/releases/download/v#{version}/tp-darwin_x64"
-      sha256 "4c8d118b0da405fb7149e8a85979d835487dbae6a794690d4d9bfec939ba4f92"
+      sha256 "80f2cdff301fcbe16ee980c885f27d946471cbff2d6141eeb5223a2196a65942"
     end
   end
 
