@@ -6,9 +6,11 @@ Homebrew tap for DaveDev42 projects.
 
 ```bash
 brew tap DaveDev42/tap
-brew install git-worktree-manager
+brew install tp
 ```
 
 ## Available Formulas
 
+- **tp** — Remote Claude Code session controller (macOS only)
 - **git-worktree-manager** — CLI tool integrating git worktree with AI coding assistants
+- **claude-code-completions** — Shell completions for the Claude Code CLI
