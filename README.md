@@ -14,3 +14,4 @@ brew install tp
 - **tp** — Remote Claude Code session controller (macOS only)
 - **git-worktree-manager** — CLI tool integrating git worktree with AI coding assistants
 - **claude-code-completions** — Shell completions for the Claude Code CLI
+- **macstate** — CLI exposing macOS system signals (network, power) as JSON
