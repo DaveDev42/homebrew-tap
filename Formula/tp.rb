@@ -4,19 +4,14 @@ class Tp < Formula
   version "0.1.20"
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/DaveDev42/teleprompter/releases/download/v#{version}/tp-darwin_arm64"
-      sha256 "41e9f8d523a2aea61cfc5daddda2118d76e828d5c545ded50b1317bde0ef5fc9"
-    else
-      url "https://github.com/DaveDev42/teleprompter/releases/download/v#{version}/tp-darwin_x64"
-      sha256 "80f2cdff301fcbe16ee980c885f27d946471cbff2d6141eeb5223a2196a65942"
-    end
-  end
+  depends_on arch: :arm64
+  depends_on :macos
+
+  url "https://github.com/DaveDev42/teleprompter/releases/download/v0.1.20/tp-darwin_arm64"
+  sha256 "41e9f8d523a2aea61cfc5daddda2118d76e828d5c545ded50b1317bde0ef5fc9"
 
   def install
-    binary = Dir["tp-darwin_*"].first
-    bin.install binary => "tp"
+    bin.install "tp-darwin_arm64" => "tp"
     generate_completions_from_executable(bin/"tp", "completions", shells: [:bash, :zsh, :fish])
   end
 
