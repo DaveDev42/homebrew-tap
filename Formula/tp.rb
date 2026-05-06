@@ -12,6 +12,7 @@ class Tp < Formula
 
   def install
     bin.install "tp-darwin_arm64" => "tp"
+    chmod 0755, bin/"tp"
     generate_completions_from_executable(bin/"tp", "completions", shells: [:bash, :zsh, :fish])
   end
 
