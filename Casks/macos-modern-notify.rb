@@ -12,6 +12,17 @@ cask "macos-modern-notify" do
   app "macos-modern-notify.app"
   binary "#{appdir}/macos-modern-notify.app/Contents/MacOS/notify"
 
+  # Ad-hoc signed (no Apple Developer ID / Notarization).
+  # Strip the quarantine xattr Homebrew applies on download so Gatekeeper
+  # doesn't pop the "Apple cannot verify..." dialog the first time `notify`
+  # spawns the daemon.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine",
+                          "#{appdir}/macos-modern-notify.app"],
+                   must_succeed: false
+  end
+
   zap trash: [
     "~/.local/state/macos-modern-notify.sock",
     "~/.local/state/macos-modern-notify.log",
