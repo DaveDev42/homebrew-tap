@@ -1,14 +1,14 @@
 class Tp < Formula
   desc "Remote Claude Code session controller"
   homepage "https://github.com/DaveDev42/teleprompter"
-  version "0.1.37"
+  version "0.1.38"
   license "MIT"
 
   depends_on arch: :arm64
   depends_on :macos
 
-  url "https://github.com/DaveDev42/teleprompter/releases/download/v0.1.37/tp-darwin_arm64"
-  sha256 "2f9d23c60ad04e3d60252b4c478b2e57397b32966d29d1ae8b0a82492f7c1b19"
+  url "https://github.com/DaveDev42/teleprompter/releases/download/v0.1.38/tp-darwin_arm64"
+  sha256 "9307ea336e9718940a091fe72daf85b601ba629f0090a750ff1c4ae1224bbf2f"
 
   def install
     bin.install "tp-darwin_arm64" => "tp"
