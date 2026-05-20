@@ -1,14 +1,14 @@
 class GitWorktreeManager < Formula
   desc "CLI tool integrating git worktree with AI coding assistants"
   homepage "https://github.com/DaveDev42/git-worktree-manager"
-  version "0.1.12"
+  version "0.1.13"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
   depends_on :macos
 
-  url "https://github.com/DaveDev42/git-worktree-manager/releases/download/v0.1.12/gw-aarch64-apple-darwin.tar.gz"
-  sha256 "42eadc8fba2a57a6f83f534e7ae77731b714c121013d0c9eeaf6a37cd69db349"
+  url "https://github.com/DaveDev42/git-worktree-manager/releases/download/v0.1.13/gw-aarch64-apple-darwin.tar.gz"
+  sha256 "3ec64adee04ee8a35354cccf7864906a69dffddc247bc54b92c36fa27fa49056"
 
   def install
     bin.install "gw"
