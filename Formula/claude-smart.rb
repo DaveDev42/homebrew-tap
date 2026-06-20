@@ -8,7 +8,7 @@ class ClaudeSmart < Formula
   depends_on :macos
 
   url "https://github.com/DaveDev42/claude-smart/releases/download/v0.2.0/csm-aarch64-apple-darwin.tar.gz"
-  sha256 "4ddcfa26b0604b3b75eb61eb8628cdbe0c94f66fa206ef6628e80a41be396c4a"
+  sha256 "f2ed121324f99df0027bd3cd26ac1a4ba87d3f588d2859dc846b9a38ad6390b3"
 
   def install
     bin.install "csm"
