@@ -12,9 +12,13 @@ class ClaudeSmart < Formula
 
   def install
     bin.install "csm"
+    # Command aliases: csm dispatches on argv[0] only for "csm-hook"; every
+    # other name behaves identically to `csm`, so these are safe drop-in names.
+    bin.install_symlink "csm" => "smart-claude"
   end
 
   test do
     assert_match "csm", shell_output("#{bin}/csm --version")
+    assert_match "csm", shell_output("#{bin}/smart-claude --version")
   end
 end
