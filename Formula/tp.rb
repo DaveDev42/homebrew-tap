@@ -41,7 +41,7 @@
 class Tp < Formula
   desc "Remote Claude Code session controller"
   homepage "https://github.com/DaveDev42/teleprompter"
-  version "0.1.53"
+  version "0.1.54"
   license "MIT"
 
   depends_on arch: :arm64
@@ -49,8 +49,8 @@ class Tp < Formula
 
   # url + sha256 are rewritten by the homebrew-tap-release action on each release.
   # The url points at the darwin_arm64 bundle tarball (prefix tree: bin/tp + libexec/tp/*).
-  url "https://github.com/DaveDev42/teleprompter/releases/download/v0.1.53/tp-darwin_arm64.tar.gz"
-  sha256 "c55ebdf28c0b5f09ec994ed0a9bc0fd4c89184df0fd2a45c83ecee330a7dc2ef"
+  url "https://github.com/DaveDev42/teleprompter/releases/download/v0.1.54/tp-darwin_arm64.tar.gz"
+  sha256 "b2879ed2a2f6df9d0696ba172af1ced8938fe80a6607e76ccb6fa3b9e8335d1e"
 
   def install
     # Rust CLI binary → /opt/homebrew/Cellar/tp/<ver>/bin/tp
