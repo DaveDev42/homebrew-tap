@@ -14,6 +14,7 @@ class Qsh < Formula
 
   def install
     bin.install "qsh"
+    man1.install Dir["man/*.1"]
   end
 
   test do
