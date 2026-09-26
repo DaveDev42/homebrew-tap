@@ -1,14 +1,14 @@
 class ClaudeSmart < Formula
   desc "Smart launcher for Claude Code (csm): session select, account switch, usage"
   homepage "https://github.com/DaveDev42/claude-smart"
-  version "0.3.7"
+  version "0.3.8"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
   depends_on :macos
 
-  url "https://github.com/DaveDev42/claude-smart/releases/download/v0.3.7/csm-aarch64-apple-darwin.tar.gz"
-  sha256 "56d098dbd3e8cd975fbb7556cac0c349b5c6434494e049f5e2bf607e7d49e8d4"
+  url "https://github.com/DaveDev42/claude-smart/releases/download/v0.3.8/csm-aarch64-apple-darwin.tar.gz"
+  sha256 "9d07190f524a119bdf0aead2efde155f7f98f21de9d092c7e3db825be0b5d9b8"
 
   def install
     bin.install "csm"
