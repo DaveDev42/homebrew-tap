@@ -1,12 +1,12 @@
 class Qsh < Formula
   desc "Remote shell over QUIC with session resume across network changes"
   homepage "https://github.com/DaveDev42/qsh"
-  url "https://github.com/DaveDev42/qsh/releases/download/v0.7.0/qsh-v0.7.0-aarch64-apple-darwin.tar.gz"
+  url "https://github.com/DaveDev42/qsh/releases/download/v0.7.1/qsh-v0.7.1-aarch64-apple-darwin.tar.gz"
   # Kept explicit even though brew can scan it from the URL: qsh's
   # release.yml `homebrew-tap` job rewrites the version / url / sha256 lines
   # by regex on every tag push, so all three must stay one-per-line.
-  version "0.7.0"
-  sha256 "079a908daaf1f5f581ec62c32ce9e803270c01555ae1741c6d652144c0da3806"
+  version "0.7.1"
+  sha256 "b89a925454572d8d0d709fc574564a8ee68bf396d0bb680948de08ee6ded6e62"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on arch: :arm64
